@@ -7,4 +7,5 @@ dotenv.config({ path: `config/.env.${process.env.NODE_ENV}` })
 
 const server = http.createServer(app);
 const port: string | number = process.env.PORT || 1000;
-server.listen(port, () => console.log(`listening on port ${port}`));
+const host: any = '40.71.24.99';
+server.listen(port, host, () => console.log(`listening on port ${port}`));
